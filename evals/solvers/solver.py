@@ -4,7 +4,7 @@ from copy import deepcopy
 from importlib import import_module
 from typing import Any, Dict, TypeVar, Union
 
-from pydantic import TypeAdapter, ValidationError
+from pydantic import ValidationError
 from typing_extensions import TypedDict
 
 from evals.api import CompletionFn
@@ -144,6 +144,7 @@ class NestedSolver(Solver):
         self.solver_specs = {}
         self._solver_cache = {}
 
+        from pydantic import TypeAdapter
         SolverSpecValidator = TypeAdapter(SolverSpec)
         for name, value in solver_specs.items():
             try:

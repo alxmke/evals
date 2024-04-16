@@ -1,6 +1,6 @@
 [project]
 name = "evals"
-version = "2.0.0.post1"
+version = "2.0.0.post2"
 requires-python = ">=3.9"
 readme = "README.md"
 dependencies = [
@@ -34,6 +34,7 @@ dependencies = [
     "jiwer",
     "seaborn",
     "statsmodels",
+    "transformers",
 ]
 
 [project.urls]

@@ -1,0 +1,6 @@
+huggingface/llm/flan-t5-small:
+  class: evals.completion_fns.huggingface:HuggingFaceLLMCompletionFn
+  args:
+    llm: HuggingFaceHub
+    llm_kwargs:
+      repo_id: google/flan-t5-small

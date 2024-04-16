@@ -129,10 +129,8 @@ def run(args: OaiEvalArguments, registry: Optional[Registry] = None) -> str:
         registry.add_registry_paths(args.registry_path)
 
     eval_spec = registry.get_eval(args.eval)
-    assert (
-        eval_spec is not None
-    ), f"Eval {args.eval} not found. Available: {list(sorted(registry._evals.keys()))}"
-
+    assert eval_spec, f"Eval {args.eval} not found. Available: {list(sorted(registry._evals.keys()))}"
+    print(eval_spec)
     def parse_extra_eval_params(
         param_str: Optional[str],
     ) -> Mapping[str, Union[str, int, float]]:
